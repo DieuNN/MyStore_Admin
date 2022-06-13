@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.AdminThongKeDoanhThuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:padding="8dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/thong_ke_tong_doanh_thu"
+            android:textSize="14sp"
+            android:text="Tổng doanh thu mọi thời gian: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_marginTop="16dp"
+            android:id="@+id/thong_ke_pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="500dp" />
+
+        <TextView
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="Top sản phẩm bán chạy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/thong_ke_danh_sach_ban_chay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/thong_ke_bar_chart_thang"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="16dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/thong_ke_bar_chart_nam"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="500dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>

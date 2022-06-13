@@ -37,6 +37,8 @@ android {
 }
 
 dependencies {
+    // mp-chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -55,6 +57,8 @@ dependencies {
 
     // firebase auth
     implementation 'com.google.firebase:firebase-auth'
+
+
 
 
 }

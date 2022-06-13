@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.lang.Exception
 
 
 class AdminTrangThaiDonHang : Fragment() {
@@ -45,8 +46,12 @@ class AdminTrangThaiDonHang : Fragment() {
                     donHang?.let { list.add(it) }
                 }
                 binding.adminFragmentTrangThaiDonHangList.apply {
-                    layoutManager = LinearLayoutManager(requireContext())
-                    adapter = TrangThaiDonHangAdapter(list,requireContext())
+                   try {
+                       layoutManager = LinearLayoutManager(requireContext())
+                       adapter = TrangThaiDonHangAdapter(list,requireContext())
+                   } catch (e: Exception) {
+
+                   }
                 }
             }
 

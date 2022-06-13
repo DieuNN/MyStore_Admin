@@ -1,7 +1,7 @@
 package com.dieunn.mystore_admin.model;
 
 public enum TrangThai {
-    MOI_DAT("Mới đặt"), DANG_GIAO_HANG("Đang giao hàng"), HOAN_THANH("Hoàn thành"), HUY_DON("Hủy đơn");
+    MOI_DAT("Mới đặt"), DANG_GIAO_HANG("Đang giao hàng"), HOAN_THANH("Đã hoàn thành"), HUY_DON("Hủy đơn");
 
     private String trangThai;
 
