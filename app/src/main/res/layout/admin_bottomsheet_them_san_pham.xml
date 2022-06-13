@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/admin_bottomsheet_them_san_pham_dong_sheet"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_close_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/admin_bottomsheet_them_san_pham_tieu_de"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:text="Thêm sản phẩm mới"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/admin_bottomsheet_them_san_pham_them_san_pham"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_check_24"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_ten"
+            android:hint="Tên sản phẩm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:focusable="false"
+            android:editable="false"
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_loai_sp"
+            android:layout_marginTop="16dp"
+            android:hint="Loại sản phẩm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_phan_tram_khuyen_mai"
+            android:layout_marginTop="16dp"
+            android:hint="Phần trăm khuyến mại"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_link_anh"
+            android:layout_marginTop="16dp"
+            android:hint="Link ảnh, nhiều link phân cách bằng dấu phẩy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_kich_co"
+            android:layout_marginTop="16dp"
+            android:hint="Kích cỡ, nếu có, phân cách bằng dấu “,”"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_mau_sac"
+            android:layout_marginTop="16dp"
+            android:hint="Màu sắc, nếu có, “,”"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_mo_ta"
+            android:layout_marginTop="16dp"
+            android:hint="Mô tả"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/admin_bottomsheet_them_san_pham_edt_ten_gia_ban"
+            android:layout_marginTop="16dp"
+            android:hint="Giá bán"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

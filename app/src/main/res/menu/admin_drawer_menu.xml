@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/admin_nav_trang_thai_don_hang"
+        android:icon="@drawable/ic_notifications_24"
+        android:title="Trạng thái đơn hàng" />
+
+    <item
+        android:id="@+id/admin_nav_cua_hang_cua_toi"
+        android:icon="@drawable/ic_cart_24"
+        android:title="Cửa hàng của tôi" />
+
+    <item
+        android:id="@+id/admin_nav_thong_ke_doanh_thu"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="Thống kê doanh thu" />
+
+    <item
+        android:id="@+id/admin_nav_quan_ly_khach_hang"
+        android:icon="@drawable/ic_person_24"
+        android:title="Quản lý khách hàng" />
+
+    <item
+        android:id="@+id/admin_nav_thoat"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Thoát trang Admin" />
+
+
+</menu>

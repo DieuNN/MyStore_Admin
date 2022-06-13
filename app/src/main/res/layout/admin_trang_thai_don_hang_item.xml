@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/admin_nav_trang_thai_don_hang_item_don_hang"
+            android:text="Đơn hàng -N4HJRPCsgGlh15FgfCy"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/admin_nav_trang_thai_don_hang_item_khach_hang"
+            android:text="Khách hàng: -N4HJRPCsgGlh15FgfCy"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <TextView
+            android:id="@+id/admin_nav_trang_thai_don_hang_item_so_dien_thoai"
+            android:text="Số điện thoại: 0123456789"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/admin_nav_trang_thai_don_hang_item_ghi_chu"
+            android:text="Ghi chú: abcxyz"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/admin_nav_trang_thai_don_hang_item_tong_gia_tri"
+            android:text="Tổng giá trị: 200000"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Trạng thái: "
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/admin_nav_trang_thai_don_hang_item_trang_thai"
+                android:text="Chưa xác nhận"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/admin_nav_trang_thai_don_hang_item_xem_chi_tiet"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#FB7000"
+                android:text="CHI TIẾT"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/admin_nav_trang_thai_don_hang_item_xac_nhan"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_baseline_check_24"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                app:tint="@null" />
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent"/>
+            <ImageButton
+                android:id="@+id/admin_nav_trang_thai_don_hang_item_xoa"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_baseline_close_24"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

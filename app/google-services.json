@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "678747270510",
+    "firebase_url": "https://appbanquanao-ac0dc-default-rtdb.firebaseio.com",
+    "project_id": "appbanquanao-ac0dc",
+    "storage_bucket": "appbanquanao-ac0dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678747270510:android:6d576c58f1543dd8c8a57f",
+        "android_client_info": {
+          "package_name": "com.dieunn.mystore_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678747270510-ajgn3n0ure0vkkrsjkvdlpvfiqor309t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dieunn.mystore_admin",
+            "certificate_hash": "e703f5892e5027cf1801db114fbca4e5ac363172"
+          }
+        },
+        {
+          "client_id": "678747270510-uouu5euv4sgho5jae4r06kl0q253271n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAScsyNuNLlQEAlczAl9aZ9Vog0smdIjwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678747270510-uouu5euv4sgho5jae4r06kl0q253271n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678747270510:android:6be7b3b939086ef1c8a57f",
+        "android_client_info": {
+          "package_name": "com.example.mystore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678747270510-uouu5euv4sgho5jae4r06kl0q253271n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAScsyNuNLlQEAlczAl9aZ9Vog0smdIjwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678747270510-uouu5euv4sgho5jae4r06kl0q253271n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678747270510:android:e4c51fe49bafd969c8a57f",
+        "android_client_info": {
+          "package_name": "com.nhom5_cp16302.appquanlybanhang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678747270510-rmfggeki66m34bvfc23icvglm4h7g1qo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nhom5_cp16302.appquanlybanhang",
+            "certificate_hash": "99d390aef7dc4eef67ea6cb4f18d06d1c09892ec"
+          }
+        },
+        {
+          "client_id": "678747270510-uouu5euv4sgho5jae4r06kl0q253271n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAScsyNuNLlQEAlczAl9aZ9Vog0smdIjwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678747270510-uouu5euv4sgho5jae4r06kl0q253271n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

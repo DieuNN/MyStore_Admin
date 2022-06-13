@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#FB7000"
+    android:padding="16dp"
+    android:layout_height="176dp">
+
+    <ImageView
+        android:src="@drawable/fire_fox"
+        android:layout_width="95dp"
+        android:layout_height="97dp"/>
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Quản lý cửa hàng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="14sp"
+        android:text="Admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

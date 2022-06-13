@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/button.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_bar_chart_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_check_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_close_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_delete_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_exit_to_app_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_cart_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_notifications_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_person_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/ic_remove_red_eye_24.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable-v24/icon_password.xml" value="0.133" />
+        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.1691995947315096" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.34791666666666665" />
+        <entry key="app/src/main/res/layout/admin_bottomsheet_them_loai_sp.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_bottomsheet_them_san_pham.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_chon_loai_san_pham.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_dialog_don_hang_chi_tiet_item_chi_tiet.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_don_hang_chi_tiet_dialog.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_nav_header.xml" value="0.1691995947315096" />
+        <entry key="app/src/main/res/layout/admin_san_pham_item.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_trang_thai_don_hang_item.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/button_default.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/fragment_admin_cua_hang_cac_loai_san_pham.xml" value="0.1691995947315096" />
+        <entry key="app/src/main/res/layout/fragment_admin_cua_hang_cac_san_pham.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/fragment_admin_cua_hang_cua_toi.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/fragment_admin_quan_ly_khach_hang.xml" value="0.1691995947315096" />
+        <entry key="app/src/main/res/layout/fragment_admin_thong_ke_doanh_thu.xml" value="0.1691995947315096" />
+        <entry key="app/src/main/res/layout/fragment_admin_trang_thai_don_hang.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/fragment_dang_nhap.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/ic_baseline_delete_24.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/item_loaisp.xml" value="0.1691995947315096" />
+        <entry key="app/src/main/res/menu/admin_drawer_menu.xml" value="0.17708333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
