@@ -1,23 +1,18 @@
 package com.dieunn.mystore_admin.fragment
 
-import android.content.ContentValues.TAG
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.dieunn.mystore_admin.R
-import com.dieunn.mystore_admin.adapter.AdminThemLoaiSpAdapter
 import com.dieunn.mystore_admin.adapter.SanPhamBanChayAdapter
 import com.dieunn.mystore_admin.databinding.FragmentAdminThongKeDoanhThuBinding
 import com.dieunn.mystore_admin.model.DonHang
 import com.dieunn.mystore_admin.model.DonHangChiTiet
-import com.dieunn.mystore_admin.model.SanPham
 import com.dieunn.mystore_admin.model.TrangThai
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
@@ -42,7 +37,7 @@ class AdminThongKeDoanhThuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         calculateTotalIncome()
         setUpPieChart()
-        setUpYearBarChart()
+        setUpYearlyBarChart()
         setUpBestSellerList()
     }
 
@@ -121,7 +116,11 @@ class AdminThongKeDoanhThuFragment : Fragment() {
         }
     }
 
-    private fun setUpYearBarChart() {
+    private fun setUpYearlyBarChart() {
+
+    }
+
+    fun setUpMonthlyChart() {
 
     }
 
