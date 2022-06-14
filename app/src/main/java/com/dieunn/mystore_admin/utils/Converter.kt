@@ -18,7 +18,7 @@ class Converter {
                 result += element.image + ", "
             }
             // xoa dau phay o cuoi
-            return result.substring(0, result.length - 1)
+            return result.substring(0, result.length - 2)
         }
 
         fun parseSizeListToString(list: List<Size>) :String {
@@ -27,7 +27,7 @@ class Converter {
                 result += element.size + ", "
             }
             // xoa dau phay o cuoi
-            return result.substring(0, result.length - 1)
+            return result.substring(0, result.length - 2)
         }
 
         fun parseSColorListToString(list: List<Color>) :String {
@@ -36,7 +36,7 @@ class Converter {
                 result += element.color + ", "
             }
             // xoa dau phay o cuoi
-            return result.substring(0, result.length - 1)
+            return result.substring(0, result.length - 2)
         }
 
         fun parseStringToImageLinkList(input:String) :List<Anh>{

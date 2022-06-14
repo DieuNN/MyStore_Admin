@@ -1,5 +1,8 @@
 package com.dieunn.mystore_admin.adapter
 
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -42,6 +45,33 @@ class AdminThemLoaiSpAdapter(
                         bottomSheetDialog.apply {
                             create()
                             show()
+                        }
+                        this.linearLayout.setOnLongClickListener {
+                            val confirmDeleteDialog = AlertDialog.Builder(binding.root.context)
+                            confirmDeleteDialog.apply {
+                                setTitle("Xóa")
+                                setMessage("Xác nhận xóa?")
+                                setNegativeButton("Hủy") { dialog, which ->
+                                    dialog.dismiss()
+                                }
+                                setPositiveButton("Xóa") { _, _ ->
+                                    FirebaseDatabase.getInstance().getReference("loai_sp").child(id)
+                                        .removeValue().addOnSuccessListener {
+                                            Toast.makeText(
+                                                binding.root.context,
+                                                "Xóa thành công!",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }.addOnFailureListener {
+                                            Toast.makeText(
+                                                binding.root.context,
+                                                "Xóa thất bại!",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
+                                }
+                            }.create().show()
+                            true
                         }
 
 
