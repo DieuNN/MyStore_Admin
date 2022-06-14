@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Paint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
@@ -117,28 +118,30 @@ class AdminSanPhamAdapter(val list: List<SanPham>, val context: Context) :
                                         this.add(element.name)
                                     }
                                 }
-                                AlertDialog.Builder(context).apply {
-                                    val dialogChonLoaiSP = LayoutInflater.from(context)
-                                        .inflate(
-                                            R.layout.admin_chon_loai_san_pham,
-                                            holder.binding.root,
-                                            false
-                                        )
-                                    val list: ListView =
-                                        dialogChonLoaiSP.findViewById(R.id.list_view_loai_san_pham)
-                                    list.adapter = ArrayAdapter(
-                                        context,
-                                        android.R.layout.simple_list_item_1,
-                                        resultAsStringList
+                                val dialogChonLoaiSP = LayoutInflater.from(context)
+                                    .inflate(
+                                        R.layout.admin_chon_loai_san_pham,
+                                        holder.binding.root,
+                                        false
                                     )
-                                    list.setOnItemClickListener { parent, view, position, id ->
-                                        bottomSheetBinding.adminBottomsheetThemSanPhamEdtLoaiSp.setText(
-                                            result[position].id
-                                        )
-                                        this.create().dismiss()
-                                    }
+
+                               val alertDialog =  AlertDialog.Builder(context).apply {
                                     setView(dialogChonLoaiSP)
-                                }.create().show()
+                                }.create()
+                                alertDialog.show()
+                                val list: ListView =
+                                    dialogChonLoaiSP.findViewById(R.id.list_view_loai_san_pham)
+                                list.adapter = ArrayAdapter(
+                                    context,
+                                    android.R.layout.simple_list_item_1,
+                                    resultAsStringList
+                                )
+                                list.setOnItemClickListener { parent, view, position, id ->
+                                    bottomSheetBinding.adminBottomsheetThemSanPhamEdtLoaiSp.setText(
+                                        result[position].id
+                                    )
+                                    alertDialog.dismiss()
+                                }
                             }
                     }
 
