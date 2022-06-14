@@ -19,6 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        FirebaseApp.initializeApp(getApplicationContext());
         ProgressBar progressBar=findViewById(R.id.progress_bar);
         Timer timer=new Timer();
         timer.schedule(new TimerTask() {
