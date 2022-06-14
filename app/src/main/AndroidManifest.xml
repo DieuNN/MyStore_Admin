@@ -14,24 +14,29 @@
         android:theme="@style/Theme.MyStore_Admin"
         tools:targetApi="31">
 
-        <activity android:name=".activity.AdminActivity"
+        <activity
+            android:name=".activity.AdminActivity"
             android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+        <activity android:name=".activity.DangNhapActivity"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.SplashActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".activity.DangNhapActivity" />
     </application>
 
 </manifest>
