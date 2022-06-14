@@ -37,19 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/thong_ke_bar_chart_thang"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="16dp" />
-
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/thong_ke_bar_chart_nam"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="500dp" />
-
-
     </LinearLayout>
 
 </ScrollView>
