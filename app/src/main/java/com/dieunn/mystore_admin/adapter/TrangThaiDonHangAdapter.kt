@@ -42,7 +42,7 @@ class TrangThaiDonHangAdapter(var data: ArrayList<DonHang>, val context: Context
                     "Số điện thoại khách: ${this.phone_number}"
                 binding.adminNavTrangThaiDonHangItemGhiChu.text = "Ghi chú: " + this.ghiChu
                 binding.adminNavTrangThaiDonHangItemTongGiaTri.text =
-                    "Tổng tiền" + this.tongTien.toString()
+                    "Tổng tiền: " + this.tongTien.toString()
                 binding.adminNavTrangThaiDonHangItemTrangThai.text = this.trangThai
 
                 if (this.trangThai.toString().contains("Hủy")) {

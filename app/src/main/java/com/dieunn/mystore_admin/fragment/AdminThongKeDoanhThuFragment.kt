@@ -3,6 +3,7 @@ package com.dieunn.mystore_admin.fragment
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -57,7 +58,7 @@ class AdminThongKeDoanhThuFragment : Fragment() {
                         TrangThai.HOAN_THANH.trangThai -> {
                             completed++
                         }
-                        TrangThai.HUY_DON.trangThai -> {
+                        "Mới đặt" -> {
                             unconfirmed++
                         }
                         else -> {
@@ -147,7 +148,8 @@ class AdminThongKeDoanhThuFragment : Fragment() {
 
             val appearanceList = ArrayList<Int>()
             for (element in soldItemIdSet) {
-                appearanceList.add(calculateAppearances(element, soldItemIdList))
+                Log.d("Thong ke", "setUpBestSellerList: $element")
+                appearanceList.add(calculateAppearances(element, soldItemIdList, donHangChiTietList))
             }
 
             binding.thongKeDanhSachBanChay.apply {
@@ -158,7 +160,11 @@ class AdminThongKeDoanhThuFragment : Fragment() {
         }
     }
 
-    private fun calculateAppearances(id:String, idList: List<String>):Int {
+    private fun calculateAppearances(
+        id: String,
+        idList: List<String>,
+        donHangChiTietList: List<DonHangChiTiet>
+    ): Int {
         var appearance = 0
         for (element in idList) {
             if (element == id) appearance++

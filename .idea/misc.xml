@@ -25,7 +25,7 @@
         <entry key="app/src/main/res/layout/admin_don_hang_chi_tiet_dialog.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/admin_nav_header.xml" value="0.1691995947315096" />
         <entry key="app/src/main/res/layout/admin_san_pham_item.xml" value="0.17708333333333334" />
-        <entry key="app/src/main/res/layout/admin_trang_thai_don_hang_item.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/admin_trang_thai_don_hang_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/button_default.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_admin_cua_hang_cac_loai_san_pham.xml" value="0.1691995947315096" />
         <entry key="app/src/main/res/layout/fragment_admin_cua_hang_cac_san_pham.xml" value="0.17708333333333334" />

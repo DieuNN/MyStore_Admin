@@ -1,5 +1,6 @@
 package com.dieunn.mystore_admin.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +24,8 @@ class SanPhamBanChayAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
             with(idList[position]) {
-                FirebaseDatabase.getInstance().getReference("san_pham").child(this).get()
+                FirebaseDatabase.getInstance().getReference("san_pham")
+                    .child(this).get()
                     .addOnSuccessListener {
                         val sanPham = it.getValue(SanPham::class.java)
                         binding.tvLoaisp.text = sanPham?.name
@@ -31,10 +33,12 @@ class SanPhamBanChayAdapter(
                             visibility = View.VISIBLE
                             text = amountList[position].toString()
                         }
-                        Picasso.get().load(sanPham!!.anh[0].image)
-                            .placeholder(R.drawable.fire_fox)
-                            .error(R.drawable.fire_fox)
-                            .into(binding.imageLoaisp)
+                        sanPham?.let {
+                            Picasso.get().load(sanPham.anh[0].image)
+                                .placeholder(R.drawable.fire_fox)
+                                .error(R.drawable.fire_fox)
+                                .into(binding.imageLoaisp)
+                        }
                     }
             }
         }

@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="16dp"
             android:id="@+id/thong_ke_danh_sach_ban_chay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
