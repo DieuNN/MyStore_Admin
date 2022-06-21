@@ -39,7 +39,7 @@ class AdminCuaHangCacLoaiSanPham : Fragment() {
     private fun setUpRecyclerView() {
         binding.cacLoaiSanPhamList.setHasFixedSize(true)
         binding.cacLoaiSanPhamList.layoutManager = GridLayoutManager(context, 4)
-        var list = ArrayList<LoaiSanPham>()
+        val list = ArrayList<LoaiSanPham>()
         val adapter = AdminThemLoaiSpAdapter(list)
         binding.cacLoaiSanPhamList.adapter = adapter
         FirebaseDatabase.getInstance().getReference("loai_sp").addValueEventListener(object :ValueEventListener {

@@ -12,67 +12,71 @@ class Converter {
             return SimpleDateFormat("dd/MM/yyyy").format(Date(time))
         }
 
-        fun parseImageLinkListToString(list: List<Anh>):String {
+        fun parseImageLinkListToString(list: List<Anh>): String {
             var result = ""
             for (element in list) {
-                result += element.image + ", "
+                result += element.image.trim() + ", "
             }
             // xoa dau phay o cuoi
             return result.substring(0, result.length - 2)
         }
 
-        fun parseSizeListToString(list: List<Size>) :String {
+        fun parseSizeListToString(list: List<Size>): String {
             var result = ""
             for (element in list) {
-                result += element.size + ", "
+                result += element.size.trim() + ", "
             }
             // xoa dau phay o cuoi
             return result.substring(0, result.length - 2)
         }
 
-        fun parseSColorListToString(list: List<Color>) :String {
+        fun parseSColorListToString(list: List<Color>): String {
             var result = ""
             for (element in list) {
-                result += element.color + ", "
+                result += element.color.trim() + ", "
             }
             // xoa dau phay o cuoi
             return result.substring(0, result.length - 2)
         }
 
-        fun parseStringToImageLinkList(input:String) :List<Anh>{
-            val arraySpliced =  input.split(",")
+        fun parseStringToImageLinkList(input: String): List<Anh> {
+            val arraySpliced = input.split(",")
             val result = ArrayList<Anh>()
             for (element in arraySpliced) {
-                result.add(Anh(
-                    element,
-                    false
-                ))
+                result.add(
+                    Anh(
+                        element.trim(),
+                        false
+                    )
+                )
             }
             return result
         }
 
-        fun parseStringToSizeList(input:String) :List<Size>{
-            val arraySpliced =  input.split(",")
+        fun parseStringToSizeList(input: String): List<Size> {
+            val arraySpliced = input.split(",")
             val result = ArrayList<Size>()
             for (element in arraySpliced) {
                 result.add(
                     Size(
-                    element,
-                    false
-                )
+                        element.trim(),
+                        false
+                    )
                 )
             }
             return result
         }
 
-        fun parseStringToColorList(input:String) :List<Color>{
-            val arraySpliced =  input.split(",")
+        fun parseStringToColorList(input: String): List<Color> {
+            val arraySpliced = input.split(",")
             val result = ArrayList<Color>()
             for (element in arraySpliced) {
-                result.add(Color(
-                    element,
-                    false
-                ))
+                result.add(
+                    Color(
+                        element.trim(),
+                        false
+                    )
+                )
             }
             return result
         }

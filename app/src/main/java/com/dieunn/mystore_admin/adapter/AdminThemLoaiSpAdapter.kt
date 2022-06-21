@@ -30,8 +30,12 @@ class AdminThemLoaiSpAdapter(
         with(holder) {
             with(list[position]) {
                 binding.apply {
-                    Picasso.get().load(image).error(R.drawable.fire_fox)
-                        .placeholder(R.drawable.fire_fox).into(this.imageLoaisp)
+                    try {
+                        Picasso.get().load(image).error(R.drawable.fire_fox)
+                            .placeholder(R.drawable.fire_fox).into(this.imageLoaisp)
+                    } catch (e: Exception) {
+
+                    }
                     this.tvLoaisp.text = name
                     this.linearLayout.setOnClickListener {
                         val bottomSheetDialog = BottomSheetDialog(binding.root.context)
@@ -107,8 +111,8 @@ class AdminThemLoaiSpAdapter(
         bottomSheetBinding: AdminBottomsheetThemLoaiSpBinding,
         loaiSanPham: LoaiSanPham
     ) {
-        if (bottomSheetBinding.adminBottomsheetThemLoaiSanPhamEdtTen.text.toString().isNotEmpty() &&
-            bottomSheetBinding.adminBottomsheetThemLoaiSanPhamEdtLink.text.toString().isNotEmpty()
+        if (bottomSheetBinding.adminBottomsheetThemLoaiSanPhamEdtTen.text.toString().isNotBlank() &&
+            bottomSheetBinding.adminBottomsheetThemLoaiSanPhamEdtLink.text.toString().isNotBlank()
         ) {
             val loaiSanPham = LoaiSanPham(
                 loaiSanPham.id,
@@ -124,6 +128,13 @@ class AdminThemLoaiSpAdapter(
                     ).show()
                     bottomSheetDialog.dismiss()
                 }
+        } else {
+            Toast.makeText(
+                bottomSheetBinding.root.context,
+                "Bạn chưa nhập vào thông tin!",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
         }
     }
 }
