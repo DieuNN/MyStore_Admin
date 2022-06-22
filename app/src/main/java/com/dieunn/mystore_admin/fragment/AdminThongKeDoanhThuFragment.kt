@@ -16,11 +16,14 @@ import com.dieunn.mystore_admin.model.DonHang
 import com.dieunn.mystore_admin.model.DonHangChiTiet
 import com.dieunn.mystore_admin.model.TrangThai
 import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.data.PieData
-import com.github.mikephil.charting.data.PieDataSet
-import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.utils.ColorTemplate
 import com.google.firebase.database.FirebaseDatabase
+import java.time.Month
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashSet
 
 
 class AdminThongKeDoanhThuFragment : Fragment() {
@@ -38,7 +41,7 @@ class AdminThongKeDoanhThuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         calculateTotalIncome()
         setUpPieChart()
-        setUpYearlyBarChart()
+        setUpMonthlyChart()
         setUpBestSellerList()
     }
 
@@ -117,12 +120,65 @@ class AdminThongKeDoanhThuFragment : Fragment() {
         }
     }
 
-    private fun setUpYearlyBarChart() {
+
+    private fun setUpMonthlyChart() {
+
+        var result = 0f
+        FirebaseDatabase.getInstance().getReference("don_hang").get().addOnSuccessListener {
+            val donHangList = ArrayList<DonHang>()
+            for (element in it.children) {
+                val donHang = element.getValue(DonHang::class.java)
+                if (donHang != null) {
+                    donHangList.add(donHang)
+                }
+
+            }
+
+            val calendar = Calendar.getInstance()
+            val currentYear = calendar.get(Calendar.YEAR)
+            val months = ArrayList<Int>()
+
+            for (i in 1..12) {
+                months.add(i)
+            }
+
+            val barEntry = ArrayList<BarEntry>()
+            for (i in 1..12) {
+                barEntry.add(BarEntry(i.toFloat(), getMonthlyEarning(i, donHangList)))
+            }
+            val barDataSet = BarDataSet(barEntry, "Thống kê doanh thu theo tháng").apply {
+                colors = ColorTemplate.MATERIAL_COLORS.toList()
+                valueTextColor = Color.BLACK
+                valueTextSize = 16f
+            }
+            val barData = BarData(barDataSet)
+
+
+            binding.thongKeBarChart.apply {
+                setFitBars(true)
+                data = barData
+                description.text = "Thống kê doanh thu theo tháng"
+                animateY(2000)
+                invalidate()
+                axisRight.setDrawLabels(false)
+
+            }
+        }
+
 
     }
 
-    fun setUpMonthlyChart() {
+    private fun getMonthlyEarning(month: Int, list: List<DonHang>): Float {
+        var result = 0f
 
+        for (element in list) {
+            if (element.trangThai.equals("Đã hoàn thành") && Date(element.thoiGianGiaoHang).month + 1 == month) {
+                result += element.tongTien
+            }
+        }
+
+
+        return result
     }
 
     private fun setUpBestSellerList() {
@@ -148,8 +204,13 @@ class AdminThongKeDoanhThuFragment : Fragment() {
 
             val appearanceList = ArrayList<Int>()
             for (element in soldItemIdSet) {
-                Log.d("Thong ke", "setUpBestSellerList: $element")
-                appearanceList.add(calculateAppearances(element, soldItemIdList, donHangChiTietList))
+                appearanceList.add(
+                    calculateAppearances(
+                        element,
+                        soldItemIdList,
+                        donHangChiTietList
+                    )
+                )
             }
 
             binding.thongKeDanhSachBanChay.apply {
@@ -183,7 +244,9 @@ class AdminThongKeDoanhThuFragment : Fragment() {
                 }
             }
             for (element in donHangList) {
-                totalIncome += element.tongTien
+                if (element.trangThai.equals("Đã hoàn thành")) {
+                    totalIncome += element.tongTien
+                }
             }
             binding.thongKeTongDoanhThu.text = "Tổng thu nhập mọi thời điểm: $totalIncome"
             binding.thongKeTongDoanhThu.setTextColor(Color.GREEN)

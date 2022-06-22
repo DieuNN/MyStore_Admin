@@ -38,6 +38,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <com.github.mikephil.charting.charts.BarChart
+            android:layout_marginTop="16dp"
+            android:id="@+id/thong_ke_bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
     </LinearLayout>
 
 </ScrollView>
